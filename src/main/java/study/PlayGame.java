@@ -6,8 +6,9 @@ import java.util.Scanner;
 public class PlayGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
+        BallGenerator ballGenerator = new BallGenerator();
         while (true) {
+            List<Ball> answerBalls = ballGenerator.generate();
             System.out.print("숫자를 입력해 주세요 : ");
             String input = scanner.nextLine();
             try {
