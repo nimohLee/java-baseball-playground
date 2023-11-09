@@ -16,4 +16,17 @@ public class Ball {
     public int getValue() {
         return value;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Ball) {
+            Ball target = (Ball) obj;
+            if (target.value == this.value) {
+                return true;
+            }
+            return false;
+        }
+
+        return false;
+    }
 }
