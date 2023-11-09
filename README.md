@@ -24,3 +24,17 @@ git checkout main // 기본 브랜치가 main인 경우
 git checkout -b 브랜치이름
 ex) git checkout -b apply-feedback
 ```
+
+
+## TODO
+[O] 메인 클래스에 게임이 종료될 때까지 진행되는 while loop 생성
+[] 야구 공의 번호와 위치를 가지고 있는 객체 생성 (Ball)
+    - [] 최대 2(0~2)의 위치와 값을 가짐 (position, value)
+[] 랜덤 야구공을 3자리를 만들어 주는 객체 생성 (BallGenerator)
+    - [] 랜덤 야구공 생성 하는 생성자 ( 0 ~ 9의 서로 다른 숫자와 0 ~ 2의 위치)
+    - [] 랜덤 숫자를 가져 오는 메서드 (getBalls)
+[] 사용자가 입력한 값을 심판하는 객체 생성 (Referee)
+    - [] 유효한 값인 지 확인 (validate)
+    - [] 입력된 야구공 조합과 정답을 비교하여 정답 유무 판단 (judge)
+[] 정답인 경우 게임 다시 시작하거나 종료
+[] 각 단위 별 테스트 코드 생성
