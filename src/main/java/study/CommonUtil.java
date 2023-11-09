@@ -8,7 +8,7 @@ public class CommonUtil {
         char[] chars = input.toCharArray();
         List<Integer> result = new ArrayList<>();
         for (int i = 0; i < chars.length; i++) {
-            result.add((int) chars[i]);
+            result.add(chars[i] - 48);
         }
         return result;
     }

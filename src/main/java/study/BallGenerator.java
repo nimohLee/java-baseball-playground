@@ -9,7 +9,17 @@ import java.util.stream.IntStream;
 
 public class BallGenerator {
     Random random = new Random();
-    public List<Ball> generate() {
+
+    public List<Ball> generate(List<Integer> numbers) {
+        List<Ball> result = new ArrayList<>();
+
+        for (int i = 0; i < numbers.size(); i++) {
+            result.add(new Ball(i, numbers.get(i)));
+        }
+
+        return result;
+    }
+    public List<Ball> randomGenerate() {
         List<Ball> result = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             Ball ball = new Ball(i, getUniqueRandomBall(result));
@@ -21,7 +31,7 @@ public class BallGenerator {
     private int getUniqueRandomBall(List<Ball> balls) {
 
         while (true) {
-            int randomValue = random.nextInt(9);
+            int randomValue = random.nextInt(9)+1;
             if (isUniqueRandomBall(balls, randomValue)) {
                 return randomValue;
             }
